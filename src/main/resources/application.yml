@@ -1,0 +1,20 @@
+app:
+  email:
+    from: monitora.olx@gmail.com
+    to: "thiago.alessandro.farias@gmail.com,msandrafarias@gmail.com"
+    recipientName: Sandrinha e Thiaguinho
+spring:
+  mail:
+    host: smtp.gmail.com
+    password: MonitoraoLX5987
+    port: 587
+    username: monitora.olx@gmail.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          starttls:
+            enable: true
+          timeout: 5000
+          writetimeout: 5000
