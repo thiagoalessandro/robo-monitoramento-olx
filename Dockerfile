@@ -14,7 +14,7 @@ ENV APP_DIR=/tmp/app/
 VOLUME /tmp
 
 # Make port 8080 available to the world outside this container
-EXPOSE 9990
+EXPOSE 8080
 
 # Add the application's jar to the container
 ADD target/${APP_FILE} ${APP_DIR}/${APP_FILE}
