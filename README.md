@@ -22,7 +22,7 @@ spring:
     username: XXX
 ```    
 
-Definir e-mail a ser notificado
+Definir enereço de e-mail a ser notificado
 
 ```sql
 insert into public.tbl_configuracao (cd_usu_atu, dh_atu, id_sit, nome, valor) 
@@ -35,7 +35,7 @@ values('ADMIN', now(), 'A', 'EMAIL_TO', 'thiago.alessandro.farias@gmail.com');
 insert into public.tbl_monitoramento (cd_usu_atu, dh_atu, id_sit, link, titulo, bot) 
 values ('ADMIN', now(), 'A', 'https://pa.olx.com.br/regiao-de-belem/autos-e-pecas/carros-vans-e-utilitarios/fiat/argo?re=38&rs=35&sf=1', 'Fiat Argo 2017 a 2019', 'OLX');
 ```
-## COMO CRIAR UM BOT NO TELEGRAM?
+## TELEGRAM - COMO CRIAR UM BOT?
 
 1. Primeiro passo é ter um Telegram Bot. Para criá-lo, abra seu app do Telegram, busque por: @BotFather e clique sobre ele.
 2. Envie o comando: /newbot.
@@ -43,7 +43,7 @@ values ('ADMIN', now(), 'A', 'https://pa.olx.com.br/regiao-de-belem/autos-e-peca
 4. Insira um username.
 5. Feito isso, você terá o Token.
 
-## COMO DESCOBRIR O CHAT ID?
+## TELEGRAM - COMO DESCOBRIR O CHAT ID?
 
 Acessar o link abaixo:
 
