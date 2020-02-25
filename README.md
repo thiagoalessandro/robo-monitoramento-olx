@@ -4,9 +4,15 @@
 
 Robô de monitoramento de novos anúncios da OLX com notificãção via e-mail e telegram.
 
-Desenvolvida com:
+## DESENVOLVIMENTO
 
-- Spring boot, postgres 10, docker, flyway, jsoup.
+```
+Spring boot 
+Postgres 10 
+Docker 
+Flyway
+Jsoup
+```
 
 ## NOTIFICAÇÃO
 
