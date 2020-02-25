@@ -1,14 +1,17 @@
 app:
+  cronScheduler: 0 0/2 * * * *
   email:
     from: monitora.olx@gmail.com
-    to: "thiago.alessandro.farias@gmail.com,msandrafarias@gmail.com"
-    recipientName: Sandrinha e Thiaguinho
+  telegram:
+    baseUrl: https://api.telegram.org/
+    token: XXX
+    chatId: XXX
 spring:
   mail:
     host: smtp.gmail.com
-    password: MonitoraoLX5987
+    password: XXX
     port: 587
-    username: monitora.olx@gmail.com
+    username: ${app.email.from}
     properties:
       mail:
         smtp:
@@ -18,3 +21,21 @@ spring:
             enable: true
           timeout: 5000
           writetimeout: 5000
+  datasource:
+    url: jdbc:postgresql://localhost/db_olx
+    username: olx
+    password: olx@0703
+    driverClassName: org.postgresql.Driver
+  jpa:
+    showSql: false
+    hibernate:
+      ddlAuto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true

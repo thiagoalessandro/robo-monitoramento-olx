@@ -11,10 +11,13 @@ public class ApplicationProperties {
     @Value("${app.email.from}")
     private String appEmailFrom;
 
-    @Value("${app.email.to}")
-    private String appEmailTo;
+    @Value("${app.telegram.baseUrl}")
+    private String appTelegramBaseUrl;
 
-    @Value("${app.email.recipientName}")
-    private String appEmailRecipientName;
+    @Value("${app.telegram.token}")
+    private String appTelegramToken;
+
+    @Value("${app.telegram.chatId}")
+    private String appTelegramChatId;
 
 }

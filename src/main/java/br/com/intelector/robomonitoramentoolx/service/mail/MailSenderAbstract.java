@@ -52,8 +52,9 @@ public abstract class MailSenderAbstract {
             helper.setText(textHtml(templateValues), true);
             javaMailSender.send(msg);
             sended = true;
+            log.info("E-mail enviado para {}", to);
         } catch (MessagingException e) {
-            log.warn(e);
+            log.error(e);
         }
         return sended;
     }

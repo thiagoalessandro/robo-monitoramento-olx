@@ -12,23 +12,35 @@
         }
 
         #topo {
-
-            width: 100% !important;
-            padding: 20px !important;
+            padding: 0 40px 0 0 !important;
             overflow: hidden !important;
+            background-color: #FFFFFF !important;
+            width: 90% !important;
+            margin: 0 auto !important;
         }
 
-        #logo {
+        .box-top {
             float: left !important;
         }
 
-        #title{
-            font-size: 22px !important;
+        .box-top-text{
+            font-size: 18px !important;
+            color: #019ABE !important;
+            padding-top: 30px;
+            width: 100%;
+        }
+
+        #logo {
+            width: 100% !important;
+        }
+
+        #title {
+            font-size: 17px !important;
             color: #019ABE !important;
         }
 
         #content {
-            font-size: 17px !important;
+            font-size: 15px !important;
             width: 90% !important;
             margin: 0 auto !important;
             background-color: #FFFFFF !important;
@@ -44,12 +56,27 @@
             font-size: 13px !important;
             margin-top: 60px !important;
         }
+
+        .quebra-linha {
+            height: 2px !important;
+        }
     </style>
 </head>
 <body>
 <div id="corpo">
-
-    <div id="topo"></div>
+    <div class="quebra-linha"></div>
+    <div id="topo">
+        <div id="logo">
+            <div class="box-top">
+                <img src="https://images.assetsdelivery.com/compings_v2/vasilyrosca/vasilyrosca1902/vasilyrosca190200036.jpg"
+                     height="100px"/>
+            </div>
+            <div class="box-top-text">
+                Olá! Encontrei um novo anúncio pra você.
+            </div>
+        </div>
+    </div>
+    <div class="quebra-linha"></div>
     <div id="content">
         <p id="title">#EMAIL_TITLE</p>
         <p>#EMAIL_CONTENT</p>
