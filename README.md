@@ -4,7 +4,7 @@
 
 Robô de monitoramento de novos anúncios da OLX com notificãção via e-mail e telegram.
 
-## DESENVOLVIMENTO
+## SOBRE O DESENVOLVIMENTO
 
 ```
 Spring boot 
