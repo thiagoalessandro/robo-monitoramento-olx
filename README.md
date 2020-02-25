@@ -1,5 +1,13 @@
 # ROBÔ DE MONITORAMENTO DE ANÚNCIOS DA OLX
 
+## SOBRE A APLICAÇÃO
+
+Robô de monitoramento de novos anúncios da OLX com notificãção via e-mail e telegram.
+
+Desenvolvida com:
+
+- Spring boot, postgres 10, docker, flyway, jsoup.
+
 ## NOTIFICAÇÃO
 
 Definir token e chatId do telegram
