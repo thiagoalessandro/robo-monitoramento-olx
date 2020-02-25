@@ -37,11 +37,11 @@ values ('ADMIN', now(), 'A', 'https://pa.olx.com.br/regiao-de-belem/autos-e-peca
 ```
 ## COMO CRIAR UM BOT NO TELEGRAM?
 
-1. Primeiro passo é ter um Telegram Bot. Para criá-lo, abra seu app do Telegram, busque por: @BotFather e clique sobre ele;
-2. Envie o comando: /newbot;
-3. Insira um nome para o seu bot;
-4. Insira um username. ...
-5. Feito isso, você receberá um Token. ...
+1. Primeiro passo é ter um Telegram Bot. Para criá-lo, abra seu app do Telegram, busque por: @BotFather e clique sobre ele.
+2. Envie o comando: /newbot.
+3. Insira um nome para o seu bot.
+4. Insira um username.
+5. Feito isso, você terá o Token.
 
 ## COMO DESCOBRIR O CHAT ID?
 
