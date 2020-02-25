@@ -14,7 +14,7 @@ Flyway
 Jsoup
 ```
 
-## NOTIFICAÇÃO
+## CONFIGURAR NOTIFICAÇÃO
 
 Definir token e chatId do telegram
 
