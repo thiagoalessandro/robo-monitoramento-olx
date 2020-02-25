@@ -51,7 +51,7 @@ Acessar o link abaixo:
 https://api.telegram.org/bot{TOKEN}/getUpdates
 ```
 
-## INICIANDO CONTAINER POSTGRES
+## DOCKER - INICIAR CONTAINER POSTGRES
 
 ```
 docker-compose up -d
