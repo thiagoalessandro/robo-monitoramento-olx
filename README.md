@@ -49,7 +49,7 @@ values('ADMIN', now(), 'A', 'EMAIL_TO', 'thiago.alessandro.farias@gmail.com');
 insert into public.tbl_monitoramento (cd_usu_atu, dh_atu, id_sit, link, titulo, bot) 
 values ('ADMIN', now(), 'A', 'https://pa.olx.com.br/regiao-de-belem/autos-e-pecas/carros-vans-e-utilitarios/fiat/argo?re=38&rs=35&sf=1', 'Fiat Argo 2017 a 2019', 'OLX');
 ```
-## Telegram - como criar um bot?
+## Telegram - Como criar um bot?
 
 1. Primeiro passo é ter um Telegram Bot. Para criá-lo, abra seu app do Telegram, busque por: @BotFather e clique sobre ele.
 2. Envie o comando: /newbot.
@@ -57,7 +57,7 @@ values ('ADMIN', now(), 'A', 'https://pa.olx.com.br/regiao-de-belem/autos-e-peca
 4. Insira um username.
 5. Feito isso, você terá o Token.
 
-## Telegram - como descobrir o chat id?
+## Telegram - Como descobrir o chat id?
 
 Acessar o link abaixo:
 
@@ -65,7 +65,7 @@ Acessar o link abaixo:
 https://api.telegram.org/bot{TOKEN}/getUpdates
 ```
 
-## Docker - iniciar container postgres
+## Docker - Iniciar container postgres
 
 ```
 docker-compose up -d
