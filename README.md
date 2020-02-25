@@ -24,14 +24,14 @@ spring:
 
 Definir e-mail a ser notificado
 
-```postgresql
+```sql
 insert into public.tbl_configuracao (cd_usu_atu, dh_atu, id_sit, nome, valor) 
 values('ADMIN', now(), 'A', 'EMAIL_TO', 'thiago.alessandro.farias@gmail.com');
 ```
 
 ## CONFIGURAR MONITORAMENTO
 
-```postgresql
+```sql
 insert into public.tbl_monitoramento (cd_usu_atu, dh_atu, id_sit, link, titulo, bot) 
 values ('ADMIN', now(), 'A', 'https://pa.olx.com.br/regiao-de-belem/autos-e-pecas/carros-vans-e-utilitarios/fiat/argo?re=38&rs=35&sf=1', 'Fiat Argo 2017 a 2019', 'OLX');
 ```
@@ -61,10 +61,8 @@ docker-compose up -d
 
 ### TELEGRAM
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/thiagoalessandro/robo-monitoramento-olx/blob/master/exemplo/bot-notificacao-telegram.jpg "Notificação via telegram")
 
 ### E-MAIL
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/thiagoalessandro/robo-monitoramento-olx/blob/master/exemplo/bot-notificacao-email.png "Notificação via e-mail")
