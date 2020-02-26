@@ -1,6 +1,20 @@
-# ROBÔ DE MONITORAMENTO DE ANÚNCIOS DA OLX
+# Robô de monitoramento de anúncios da olx
 
-## NOTIFICAÇÃO
+## Sobre a aplicação
+
+Robô de monitoramento de novos anúncios da OLX com notificãção via e-mail e telegram.
+
+## Sobre o desenvolvimento
+
+```
+Spring boot 
+Postgres 10 
+Docker 
+Flyway
+Jsoup
+```
+
+## Configurar notificação
 
 Definir token e chatId do telegram
 
@@ -22,28 +36,28 @@ spring:
     username: XXX
 ```    
 
-Definir e-mail a ser notificado
+Definir enereço de e-mail a ser notificado
 
-```postgresql
+```sql
 insert into public.tbl_configuracao (cd_usu_atu, dh_atu, id_sit, nome, valor) 
 values('ADMIN', now(), 'A', 'EMAIL_TO', 'thiago.alessandro.farias@gmail.com');
 ```
 
-## CONFIGURAR MONITORAMENTO
+## Configurar monitoramento
 
-```postgresql
+```sql
 insert into public.tbl_monitoramento (cd_usu_atu, dh_atu, id_sit, link, titulo, bot) 
 values ('ADMIN', now(), 'A', 'https://pa.olx.com.br/regiao-de-belem/autos-e-pecas/carros-vans-e-utilitarios/fiat/argo?re=38&rs=35&sf=1', 'Fiat Argo 2017 a 2019', 'OLX');
 ```
-## COMO CRIAR UM BOT NO TELEGRAM?
+## Telegram - Como criar um bot?
 
-1. Primeiro passo é ter um Telegram Bot. Para criá-lo, abra seu app do Telegram, busque por: @BotFather e clique sobre ele;
-2. Envie o comando: /newbot;
-3. Insira um nome para o seu bot;
-4. Insira um username. ...
-5. Feito isso, você receberá um Token. ...
+1. Primeiro passo é ter um Telegram Bot. Para criá-lo, abra seu app do Telegram, busque por: @BotFather e clique sobre ele.
+2. Envie o comando: /newbot.
+3. Insira um nome para o seu bot.
+4. Insira um username.
+5. Feito isso, você terá o Token.
 
-## COMO DESCOBRIR O CHAT ID?
+## Telegram - Como descobrir o chat id?
 
 Acessar o link abaixo:
 
@@ -51,20 +65,18 @@ Acessar o link abaixo:
 https://api.telegram.org/bot{TOKEN}/getUpdates
 ```
 
-## INICIANDO CONTAINER POSTGRES
+## Docker - Iniciar container postgres
 
 ```
 docker-compose up -d
 ```
 
-## EXEMPLO DE NOTIFICAÇÕES
+## Exemplo de notificações
 
-### TELEGRAM
+### Telegram
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/thiagoalessandro/robo-monitoramento-olx/blob/master/exemplo/bot-notificacao-telegram.jpg "Notificação via telegram")
 
-### E-MAIL
+### E-mail
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/thiagoalessandro/robo-monitoramento-olx/blob/master/exemplo/bot-notificacao-email.png "Notificação via e-mail")
