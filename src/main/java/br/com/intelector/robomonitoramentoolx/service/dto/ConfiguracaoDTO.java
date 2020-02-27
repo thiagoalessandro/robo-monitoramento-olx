@@ -8,6 +8,5 @@ public class ConfiguracaoDTO {
     private String emailTo;
     private String notificarViaEmail;
     private String notificarViaTelegram;
-    private String primeiraExecucao;
 
 }

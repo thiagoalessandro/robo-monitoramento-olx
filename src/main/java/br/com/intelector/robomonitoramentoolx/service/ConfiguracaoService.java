@@ -37,24 +37,9 @@ public class ConfiguracaoService {
             log.info("NOTIFICAR_VIA_EMAIL: {}", configuracaoDTO.getNotificarViaEmail());
             configuracaoDTO.setNotificarViaTelegram(getValue("NOTIFICAR_VIA_TELEGRAM"));
             log.info("NOTIFICAR_VIA_TELEGRAM: {}", configuracaoDTO.getNotificarViaTelegram());
-            configuracaoDTO.setPrimeiraExecucao(getValue("PRIMEIRA_EXECUCAO"));
-            log.info("PRIMEIRA_EXECUCAO: {}", configuracaoDTO.getPrimeiraExecucao());
         } catch (Exception e) {
             throw new CarregarConfiguracaoException(e);
         }
         return configuracaoDTO;
-    }
-
-    public void atualizarPrimeriaExecucao() throws PrimeiraExecucaoException {
-        Optional<Configuracao> configuracao;
-        try {
-            configuracao = configuracaoRepository.findByNome("PRIMEIRA_EXECUCAO");
-            if (configuracao.isPresent() && configuracao.get().getValor().equals("S")) {
-                configuracao.get().setValor("N");
-                configuracaoRepository.save(configuracao.get());
-            }
-        } catch (Exception e) {
-            throw new PrimeiraExecucaoException(e);
-        }
     }
 }

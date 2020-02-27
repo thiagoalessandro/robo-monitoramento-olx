@@ -1,10 +1,13 @@
 package br.com.intelector.robomonitoramentoolx.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
+@ToString
 @Entity
 @Table(name = "tbl_anuncio")
 public class Anuncio extends AbstractEntity {
@@ -31,5 +34,11 @@ public class Anuncio extends AbstractEntity {
 
     @Column(name = "link")
     private String link;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "dh_cadastro")
+    private Date dhCadastro;
+
+
 
 }

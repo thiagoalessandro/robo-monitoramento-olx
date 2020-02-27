@@ -2,11 +2,13 @@ package br.com.intelector.robomonitoramentoolx.model;
 
 import br.com.intelector.robomonitoramentoolx.domain.DominioBot;
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
+@ToString
 @Entity
 @Table(name = "tbl_monitoramento")
 public class Monitoramento extends AbstractEntity {
@@ -25,5 +27,8 @@ public class Monitoramento extends AbstractEntity {
 
     @Column(name = "link")
     private String link;
+
+    @Column(name = "primeira_exec")
+    private String primeiraExecucao;
 
 }

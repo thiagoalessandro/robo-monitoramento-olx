@@ -21,13 +21,20 @@ public class SchedulerMonitoramentoService {
     private MonitoramentoService monitoramentoService;
 
     @Autowired
-    private ConfiguracaoService configuracaoService;
+    private AnuncioService anuncioService;
 
-    @Scheduled(cron = "${app.cronScheduler}")
+    @Scheduled(cron = "${app.scheduler.monitorar}")
     public void monitorar() {
         log.info("Procurando novos anúncios...");
         rastrearNovosAnuncios();
         log.info("Encerrando busca");
+    }
+
+    @Scheduled(cron = "${app.scheduler.removerAnuncioAntigo}")
+    public void removerAnunciosAntigos() {
+        log.info("Removendo anúncios antigos...");
+        anuncioService.removerAnuncioAntigo();
+        log.info("Encerrando limpeza");
     }
 
     public void rastrearNovosAnuncios() {
@@ -35,11 +42,11 @@ public class SchedulerMonitoramentoService {
         try {
             monitoramentos = monitoramentoService.listAllByAtivo();
             for (Monitoramento monitoramento : monitoramentos) {
+                log.debug("Monitoramento: {}", monitoramento.toString());
                 monitoramentoService.rastrear(monitoramento);
             }
-            configuracaoService.atualizarPrimeriaExecucao();
-        } catch (PrimeiraExecucaoException e) {
-            log.error("Ocorreu um erro ao atualizar primeira execução", e);
+        } catch (Exception e) {
+            log.error("Ocorreu um erro ao rastrear novos anúncios", e);
         }
     }
 

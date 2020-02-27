@@ -1,5 +1,7 @@
 app:
-  cronScheduler: 0 0/2 * * * *
+  scheduler:
+    monitorar: 0 0/2 * * * *
+    removerAnuncioAntigo: 0 0/30 * * * *
   email:
     from: monitora.olx@gmail.com
   telegram:

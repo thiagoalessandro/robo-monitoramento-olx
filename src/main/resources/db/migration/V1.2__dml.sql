@@ -2,5 +2,4 @@ insert into public.tbl_monitoramento (cd_usu_atu, dh_atu, id_sit, link, titulo, 
 insert into public.tbl_configuracao (cd_usu_atu, dh_atu, id_sit, nome, valor) values('ADMIN', now(), 'A', 'EMAIL_TO', 'thiago.alessandro.farias@gmail.com,msandrafarias@gmail.com');
 insert into public.tbl_configuracao (cd_usu_atu, dh_atu, id_sit, nome, valor) values('ADMIN', now(), 'A', 'NOTIFICAR_VIA_TELEGRAM', 'S');
 insert into public.tbl_configuracao (cd_usu_atu, dh_atu, id_sit, nome, valor) values('ADMIN', now(), 'A', 'NOTIFICAR_VIA_EMAIL', 'S');
-insert into public.tbl_configuracao (cd_usu_atu, dh_atu, id_sit, nome, valor) values('ADMIN', now(), 'A', 'PRIMEIRA_EXECUCAO', 'S');
 
