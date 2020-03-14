@@ -1,17 +1,12 @@
 app:
-  scheduler:
-    monitorar: 0 0/2 * * * *
-    removerAnuncioAntigo: 0 0/30 * * * *
+  nomeArquivo: 'fatura_itau_gold.csv'
+  diretorioArquivo: '/home/thiago/develop/thiago/gerencia-fatura-cartao/'
   email:
     from: monitora.olx@gmail.com
-  telegram:
-    baseUrl: https://api.telegram.org/
-    token: XXX
-    chatId: XXX
 spring:
   mail:
     host: smtp.gmail.com
-    password: XXX
+    password: MonitoraOLX5987
     port: 587
     username: ${app.email.from}
     properties:
@@ -24,9 +19,9 @@ spring:
           timeout: 5000
           writetimeout: 5000
   datasource:
-    url: jdbc:postgresql://localhost/db_olx
-    username: olx
-    password: olx@0703
+    url: jdbc:postgresql://localhost/db_gerenciar_fatura
+    username: app
+    password: app@070335
     driverClassName: org.postgresql.Driver
   jpa:
     showSql: false
