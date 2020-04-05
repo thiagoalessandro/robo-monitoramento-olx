@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>br.com.intelector</groupId>
-    <artifactId>gerenciar-fatura-cartao</artifactId>
+    <artifactId>gerenciar-conta-pagar</artifactId>
     <version>1.0.0</version>
-    <name>gerenciar-fatura-cartao</name>
-    <description>Gerenciar Fatura cartão de crédito</description>
+    <name>gerenciar-conta-pagar</name>
+    <description>Gerenciar contas a pagar</description>
 
     <properties>
         <java.version>1.8</java.version>

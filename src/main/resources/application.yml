@@ -1,6 +1,6 @@
 app:
-  nomeArquivo: 'fatura_itau_gold.csv'
-  diretorioArquivo: '/home/thiago/develop/thiago/gerencia-fatura-cartao/'
+  nomeArquivo: 'ITAUICONTA_07042020.csv'
+  diretorioArquivo: '/home/thiago/develop/thiago/gerencia-conta-pagar/importacao/'
   email:
     from: monitora.olx@gmail.com
 spring:
@@ -19,7 +19,7 @@ spring:
           timeout: 5000
           writetimeout: 5000
   datasource:
-    url: jdbc:postgresql://localhost/db_gerenciar_fatura
+    url: jdbc:postgresql://localhost/db_gerenciar_conta
     username: app
     password: app@070335
     driverClassName: org.postgresql.Driver
@@ -36,3 +36,17 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
+# logging
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+  level:
+    root: INFO
+    br:
+      com:
+        intelector:
+          gerenciarcontapagar: DEBUG
+    org:
+      hibernate:
+        type: INFO
