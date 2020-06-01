@@ -16,7 +16,7 @@ public class ContaRecorrenteService {
     private ContaRecorrenteRepository repository;
 
     public Optional<ContaRecorrente> findByDescricao(String descricao) {
-        return repository.findByDescricao(descricao);
+        return repository.findByDescricaoIgnoreCase(descricao);
     }
 
     public Optional<ContaRecorrente> procurarContaRecorrente(String descricao) {

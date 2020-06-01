@@ -43,17 +43,7 @@ public class LancamentoUtils {
         if (!movimentacao.contains("/"))
             return movimentacao.trim();
 
-        if(movimentacao.contains(" ")) {
-            StringJoiner strBuilder = new StringJoiner(" ");
-            String[] movimentacaoTemp = movimentacao.split(" ");
-
-            for (int i = 0; i < (movimentacaoTemp.length - 1); i++)
-                strBuilder.add(movimentacaoTemp[i]);
-
-            return strBuilder.toString().trim();
-        }else{
-            return movimentacao.substring(0, movimentacao.length()-5);
-        }
+        return movimentacao.trim().substring(0, movimentacao.length()-5).trim();
     }
 
     public static Date getDataCompra(String diaMes, int parcelaAtual) throws ArquivoException, ParseException {

@@ -9,6 +9,6 @@ import java.util.Optional;
 @Repository
 public interface ContaRecorrenteRepository extends JpaRepository<ContaRecorrente, Long> {
 
-    Optional<ContaRecorrente> findByDescricao(String descricao);
+    Optional<ContaRecorrente> findByDescricaoIgnoreCase(String descricao);
 
 }

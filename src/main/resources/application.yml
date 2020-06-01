@@ -1,5 +1,5 @@
 app:
-  nomeArquivo: 'ITAUICONTA_07042020.csv'
+  nomeArquivo: 'ITAUICONTA_07062020.csv'
   diretorioArquivo: '/home/thiago/develop/thiago/gerencia-conta-pagar/importacao/'
   email:
     from: monitora.olx@gmail.com
@@ -20,8 +20,8 @@ spring:
           writetimeout: 5000
   datasource:
     url: jdbc:postgresql://localhost/db_gerenciar_conta
-    username: app
-    password: app@070335
+    username: tcb
+    password: tcb
     driverClassName: org.postgresql.Driver
   jpa:
     showSql: false
